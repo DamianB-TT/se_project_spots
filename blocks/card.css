@@ -4,6 +4,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .card__content {
@@ -13,6 +14,7 @@
 }
 
 .card__title {
+  margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -27,8 +29,12 @@
   background-image: url(../images/heart.svg);
   width: 23px;
   height: 20px;
-  border: 2px;
+  border: none;
   background-color: transparent;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   opacity: 40%;
   transition:
     background-image 0.3s,
@@ -46,9 +52,7 @@
     height: 288px;
   }
   .card__title {
-    max-width: 265px;
-    max-height: 16px;
-    font-weight: 500;
+    max-width: 235px;
     font-size: 16px;
     line-height: 1;
   }
