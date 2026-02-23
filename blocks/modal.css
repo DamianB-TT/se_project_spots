@@ -1,0 +1,122 @@
+.modal {
+  visibility: hidden;
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__container {
+  max-width: 730px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 32px 50px;
+  position: relative;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  height: 40px;
+  width: 40px;
+  background-image: url(../images/close-btn.svg);
+  background-color: transparent;
+  border-style: none;
+}
+
+.modal__close-btn:hover {
+  cursor: pointer;
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  color: #212121;
+  max-width: 169px;
+  max-height: 32px;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  margin: 0 0 32px;
+  color: #212121b2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.modal__input {
+  display: block;
+  margin: 8px 0 0;
+  border-radius: 8px;
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid #21212166;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.modal__input::placeholder {
+  color: #2121214d;
+}
+
+.modal__submit-btn {
+  font-weight: 500;
+  font-size: 16px;
+  color: #fcf5e5;
+  padding: 18px 58px;
+  border-radius: 8px;
+  background-color: #212121;
+  max-width: 156px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.modal__submit-btn:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+  .modal__container {
+    padding: 12px 12px;
+  }
+
+  .modal__close-btn {
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0 0 24px;
+  }
+
+  .modal__input {
+    font-size: 16px;
+  }
+
+  .modal__submit-btn {
+    max-width: none;
+  }
+}
