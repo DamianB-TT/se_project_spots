@@ -12,6 +12,11 @@
   display: block;
   border-radius: 8px;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card__image:hover {
+  outline: 2px solid rgba(0, 0, 0, 0.08);
 }
 
 .card__content {
@@ -63,7 +68,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  opacity: 40%;
+  opacity: 0.4;
   transition:
     background-image 0.3s,
     opacity 0.3s;
@@ -71,13 +76,13 @@
 
 .card__like-btn:hover {
   background-image: url(../images/heart-hover.svg);
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 }
 
 .card__like-btn_active {
   background-image: url(../images/State=Liked.svg);
-  opacity: 100%;
+  opacity: 1;
 }
 
 .card__like-btn_active:hover {

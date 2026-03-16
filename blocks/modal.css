@@ -48,17 +48,12 @@
   transition: background-image 0.3s;
 }
 
-.modal__close-btn:hover {
+.modal__close-btn:not(.modal__close-btn_type_preview):hover {
   cursor: pointer;
   background-image: url(../images/close-btn-hover.svg);
 }
 
 .modal__close-btn_type_preview {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  background-color: transparent;
-  border-style: none;
   top: 0;
   right: -52.5px;
   background-image: url(../images/img-close-btn.svg);
@@ -66,7 +61,7 @@
 }
 
 .modal__close-btn_type_preview:hover {
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
 }
 
@@ -130,7 +125,7 @@
 
 .modal__submit-btn:hover {
   cursor: pointer;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .modal__image-container {

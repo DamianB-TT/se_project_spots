@@ -77,7 +77,6 @@ function getCardElement(data) {
   const deleteButtonEl = cardElement.querySelector(".card__delete-btn");
   deleteButtonEl.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImageEl.addEventListener("click", () => {
@@ -138,6 +137,7 @@ function handleAddCardSubmit(evt) {
   };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+  evt.target.reset();
 
   closeModal(newPostModal);
 }
