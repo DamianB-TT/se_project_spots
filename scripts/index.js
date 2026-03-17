@@ -33,10 +33,11 @@ const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
-const editProfileNameInput =
-  editProfileModal.querySelector("#profle-name-input");
+const editProfileNameInput = editProfileModal.querySelector(
+  "#profile-name-input",
+);
 const editProfileDescriptionInput = editProfileModal.querySelector(
-  "#profle-description-input",
+  "#profile-description-input",
 );
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
