@@ -10,12 +10,13 @@ This project is the third project of the Software Engineering program at TripleT
 
 - HTML
 - CSS (Grid, Flexbox, Media Queries)
+- JavaScript (Event handling, form validation, dynamic UI)
 - BEM Methodology
 - Responsive design
 
 ## Project Pitch
 
-Check out [this video](https://drive.google.com/file/d/1KyylztBYggdK8jDf2yVVcuraEJPQL6S5/view?usp=sharing), where I describe my
+Check out [this video](https://www.loom.com/share/e55e8723e4494e62a5f9f80a7c2257fd), where I describe my
 project and some challenges I faced while building it.
 
 ## Deployment
