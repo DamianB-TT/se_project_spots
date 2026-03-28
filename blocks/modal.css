@@ -128,7 +128,7 @@
   transition: opacity 0.3s;
 }
 
-.modal__eror_visible {
+.modal__error_visible {
   opacity: 1;
   visibility: visible;
 }
@@ -152,7 +152,7 @@
   opacity: 0.8;
 }
 
-.modal__submit-btn-inactive {
+.modal__submit-btn_inactive {
   opacity: 0.5;
 }
 
