@@ -123,6 +123,14 @@
   font-weight: 500;
   font-size: 16px;
   margin-top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.modal__eror_visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal__submit-btn {

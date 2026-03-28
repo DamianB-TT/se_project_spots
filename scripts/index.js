@@ -29,10 +29,6 @@ const initialCards = [
   },
 ];
 
-const cardSubmitBtn = document
-  .querySelector(".modal__container")
-  .querySelector(".modal__form");
-
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -48,8 +44,11 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
-const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostSubmitBtn = newPostForm.querySelector(
+  settings.submitButtonSelector,
+);
+const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostLinkInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
 
@@ -96,10 +95,29 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  modal.addEventListener("mousedown", closeOnOverlay);
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  modal.removeEventListener("mousedown", closeOnOverlay);
+  document.removeEventListener("keydown", handleEscape);
+}
+
+function closeOnOverlay(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
+  }
+}
+
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openModalEl = document.querySelector(".modal_is-opened");
+    if (openModalEl) {
+      closeModal(openModalEl);
+    }
+  }
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -122,6 +140,16 @@ previewCloseBtn.addEventListener("click", () => {
 });
 
 newPostBtn.addEventListener("click", function () {
+  newPostForm.reset();
+
+  resetValidation(
+    newPostForm,
+    [newPostLinkInput, newPostCaptionInput],
+    settings,
+  );
+
+  disableButton(newPostSubmitBtn, settings);
+
   openModal(newPostModal);
 });
 
@@ -149,7 +177,7 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(cardElement);
   evt.target.reset();
 
-  disableButton(cardSubmitBtn, settings);
+  disableButton(newPostSubmitBtn, settings);
   closeModal(newPostModal);
 }
 
