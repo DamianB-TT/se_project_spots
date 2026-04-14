@@ -9,19 +9,21 @@
     />
     <meta name="author" content="Damian Byrd" />
     <meta name="keywords" content="HTML, CSS, Image sharing" />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
+        <img
+          src="<%=require('./images/logo.svg')%>"
+          alt="Spot logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            src="<%=require('./images/avatar.jpg')%>"
             alt="Bessie Coleman"
             class="profile__avatar"
           />
@@ -31,7 +33,7 @@
             <button type="button" class="profile__edit-btn">
               <img
                 class="profile__edit-btn-icon"
-                src="./images/pencil.svg"
+                src="<%=require('./images/pencil.svg')%>"
                 alt="Pencil icon"
               />Edit Profile
             </button>
@@ -39,7 +41,7 @@
           <button type="button" class="profile__add-btn">
             <img
               class="profile__add-btn-icon"
-              src="./images/plus.svg"
+              src="<%=require('./images/plus.svg')%>"
               alt="Plus icon"
             />New Post
           </button>
@@ -150,7 +152,5 @@
         </div>
       </div>
     </div>
-    <script src="./scripts/validation.js"></script>
-    <script src="./scripts/index.js"></script>
   </body>
 </html>
