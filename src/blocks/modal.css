@@ -14,6 +14,7 @@
   transition:
     visibility 0s 0.3s,
     opacity 0.3s;
+  z-index: 2;
 }
 
 .modal_type_preview {
@@ -36,6 +37,10 @@
   position: relative;
 }
 
+.modal__container-delete {
+  max-width: 630px;
+}
+
 .modal__close-btn {
   position: absolute;
   top: 32px;
@@ -48,7 +53,9 @@
   transition: background-image 0.3s;
 }
 
-.modal__close-btn:not(.modal__close-btn_type_preview):hover {
+.modal__close-btn:not(.modal__close-btn_type_preview):not(
+    .modal__close-btn_delete
+  ):hover {
   cursor: pointer;
   background-image: url(../images/close-btn-hover.svg);
 }
@@ -65,6 +72,18 @@
   cursor: pointer;
 }
 
+.modal__close-btn_delete {
+  top: 0;
+  right: -52.5px;
+  background-image: url(../images/close-btn-white.svg);
+  transition: opacity 0.3s;
+}
+
+.modal__close-btn_delete:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
 .modal__title {
   margin: 0 0 32px;
   color: #212121;
@@ -74,9 +93,24 @@
   font-size: 32px;
 }
 
+.modal__title-avatar {
+  max-width: 285px;
+}
+
+.modal__title-delete {
+  max-width: 590px;
+  max-height: 24px;
+  font-size: 24px;
+}
+
 .modal__form {
   display: flex;
   flex-direction: column;
+}
+
+.modal__form-delete {
+  flex-direction: row;
+  justify-content: center;
 }
 
 .modal__label {
@@ -156,6 +190,20 @@
   opacity: 0.5;
 }
 
+.modal__submit-btn_delete {
+  background-color: rgba(255, 101, 101, 1);
+  color: rgba(33, 33, 33, 1);
+  margin-right: 20px;
+  padding: 18px 49px;
+}
+
+.modal__submit-btn_cancel {
+  background-color: transparent;
+  color: rgba(33, 33, 33, 1);
+  border: 1px solid black;
+  padding: 18px 49px;
+}
+
 .modal__image-container {
   position: relative;
 }
@@ -189,13 +237,50 @@
     padding: 12px 12px;
   }
 
+  .modal__container-delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .modal__image-container {
     max-width: unset;
+  }
+
+  .modal__title-delete {
+    max-width: 276px;
+    max-height: none;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .modal__form-delete {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal__submit-btn_delete {
+    margin-bottom: 12px;
+  }
+
+  .modal__submit-btn_delete,
+  .modal__submit-btn_cancel {
+    width: 156px;
+    margin-right: 0;
+    padding: 18px 49px;
   }
 
   .modal__close-btn {
     top: 12px;
     right: 12px;
+  }
+
+  .modal__close-btn_delete {
+    top: -48px;
+    right: 6px;
+    background-image: url(../images/close-btn-white.svg);
+    transition: opacity 0.3s;
   }
 
   .modal__close-btn_type_preview {
