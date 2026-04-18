@@ -36,6 +36,7 @@
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "main -d dist",
+    "homepage": "https://damianb-tt.github.io/se_project_spots/"
   }
 }
