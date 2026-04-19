@@ -33,6 +33,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve --mode development"
+    "dev": "webpack serve --mode development",
+    "predeploy": "npm run build",
+    "deploy": "main -d dist",
+    "homepage": "https://damianb-tt.github.io/se_project_spots/"
   }
 }
