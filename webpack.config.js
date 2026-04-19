@@ -17,7 +17,7 @@ module.exports = {
   devtool: "inline-source-map",
   stats: "errors-only",
   devServer: {
-    static: path.resolve(__dirname, "./dist"),
+    static: path.resolve(__dirname, "./docs"),
     compress: true,
     port: 8080,
     open: true,
